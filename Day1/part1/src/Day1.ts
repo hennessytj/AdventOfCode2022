@@ -1,4 +1,4 @@
-import getInputFromFile from './getGrid'
+import getInputFromFile from './getInput'
 
 // let cals = [
 //     "1000",

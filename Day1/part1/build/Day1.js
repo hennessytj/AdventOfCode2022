@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const getGrid_1 = __importDefault(require("./getGrid"));
+const getInput_1 = __importDefault(require("./getInput"));
 // let cals = [
 //     "1000",
 //     "2000",
@@ -42,6 +42,6 @@ function getMostCalories(calories) {
     return mostCals;
 }
 //] take file in as array of strings
-const input = (0, getGrid_1.default)('build/input.txt');
+const input = (0, getInput_1.default)('build/input.txt');
 console.log(getMostCalories(input));
 // console.log(getMostCalories(cals))
