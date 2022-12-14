@@ -45,9 +45,5 @@ function sumAllCalories(calories: string[]) {
 }
 
 
-//] take file in as array of strings
-
 const input = getInputFromFile('build/input.txt')
 console.log(sumAllCalories(input))
-
-// console.log(getMostCalories(cals))
