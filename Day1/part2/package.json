@@ -1,0 +1,19 @@
+{
+  "name": "day1",
+  "version": "1.0.0",
+  "description": "## Usage",
+  "main": "Day1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "start": "node build/Day1.js"
+  },
+  "author": "TJ",
+  "license": "ISC",
+  "dependencies": {
+    "@types/n-readlines": "^1.0.3",
+    "n-readlines": "^1.0.1",
+    "priority-queue-typescript": "^1.0.1"
+  }
+}
