@@ -1,0 +1,29 @@
+{
+  "name": "day3",
+  "version": "1.0.0",
+  "description": "Day 3: Rucksack Reorganization",
+  "main": "Day3.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "start": "node build/Day3.js",
+    "lint": "eslint"
+  },
+  "author": "TJ",
+  "license": "ISC",
+  "dependencies": {
+    "@types/n-readlines": "^1.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
+    "n-readlines": "^1.0.1"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "@typescript-eslint/tslint"
+    ],
+    "parserOptions": {
+        "project": "tsconfig.json"
+    }
+  }
+}
