@@ -41,7 +41,7 @@ export function getInputAsCharsFromFile(file: string) {
             fs.readSync(fd, buffer, 0, 1, offset++)
             return String(buffer)
         } else {
-            throw Error('Iterator exhausted')
+            throw new Error('Iterator exhausted')
         }
     }
     return next
