@@ -1,0 +1,1 @@
+/Users/timothyhennessy/Code/AdventOfCode/AdventOfCode2022/utils/getInput.ts
