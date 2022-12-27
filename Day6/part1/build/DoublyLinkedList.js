@@ -50,6 +50,7 @@ class DoublyLinkedList {
     }
 }
 exports.DoublyLinkedList = DoublyLinkedList;
+// Quick tests -- not nearly robust enough, but it gets the ball rolling:-D
 function testEmptyDLL() {
     const list = new DoublyLinkedList();
     return list.isEmpty() && list.length() === 0;
@@ -80,4 +81,4 @@ function testReadFromFileDLL() {
 // console.log('testEmptyDLL() ', testEmptyDLL())
 // console.log('testInsertAtTailWhenEmptyDLL() ', testInsertAtTailWhenEmptyDLL())
 // console.log('testInsertAtTailWhenNotEmptyDLL() ', testInsertAtTailWhenNotEmptyDLL())
-testReadFromFileDLL();
+// testReadFromFileDLL()

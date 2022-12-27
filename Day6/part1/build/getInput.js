@@ -68,13 +68,10 @@ function getInputAsCharsFromFile(file) {
         if (offset < fileSize) {
             let buffer = Buffer.alloc(1);
             fs.readSync(fd, buffer, 0, 1, offset++);
-            if (offset >= fileSize) {
-                fs.close(fd);
-            }
             return String(buffer);
         }
         else {
-            throw Error('Iterator exhausted');
+            throw new Error('Iterator exhausted');
         }
     }
     return next;
