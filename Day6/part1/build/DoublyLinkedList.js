@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DoublyLinkedList = void 0;
+const getInput_1 = require("./getInput");
 class DoublyLinkedListNode {
     constructor(item) {
         this.item = item;
@@ -33,7 +34,7 @@ class DoublyLinkedList {
             this.tail = newNode;
         }
         else {
-            let currentTail = this.tail;
+            const currentTail = this.tail;
             currentTail.next = newNode;
             newNode.prev = currentTail;
             this.tail = newNode;
@@ -67,6 +68,16 @@ function testInsertAtTailWhenNotEmptyDLL() {
     list.printList();
     return !list.isEmpty() && list.length() === 10;
 }
-console.log('testEmptyDLL() ', testEmptyDLL());
-console.log('testInsertAtTailWhenEmptyDLL() ', testInsertAtTailWhenEmptyDLL());
-console.log('testInsertAtTailWhenNotEmptyDLL() ', testInsertAtTailWhenNotEmptyDLL());
+function testReadFromFileDLL() {
+    const list = new DoublyLinkedList();
+    const fileSize = (0, getInput_1.getFileSize)('./build/input.txt');
+    const getNextChar = (0, getInput_1.getInputAsCharsFromFile)('./build/input.txt');
+    for (let i = 0; i < fileSize; i++) {
+        list.insertAtTail(getNextChar());
+    }
+    list.printList();
+}
+// console.log('testEmptyDLL() ', testEmptyDLL())
+// console.log('testInsertAtTailWhenEmptyDLL() ', testInsertAtTailWhenEmptyDLL())
+// console.log('testInsertAtTailWhenNotEmptyDLL() ', testInsertAtTailWhenNotEmptyDLL())
+testReadFromFileDLL();

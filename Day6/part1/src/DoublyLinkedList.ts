@@ -1,3 +1,5 @@
+import { getFileSize, getInputAsCharsFromFile } from "./getInput"
+
 class DoublyLinkedListNode {
     public item: any
     public prev: DoublyLinkedListNode | null
@@ -40,7 +42,7 @@ export class DoublyLinkedList {
             this.head = newNode
             this.tail = newNode
         } else {
-            let currentTail = this.tail!
+            const currentTail = this.tail!
             currentTail.next = newNode
             newNode.prev = currentTail
             this.tail = newNode
@@ -78,7 +80,18 @@ function testInsertAtTailWhenNotEmptyDLL() {
     return !list.isEmpty() && list.length() === 10
 }
 
-console.log('testEmptyDLL() ', testEmptyDLL())
-console.log('testInsertAtTailWhenEmptyDLL() ', testInsertAtTailWhenEmptyDLL())
-console.log('testInsertAtTailWhenNotEmptyDLL() ', testInsertAtTailWhenNotEmptyDLL())
+function testReadFromFileDLL() {
+    const list = new DoublyLinkedList()
+    const fileSize = getFileSize('./build/input.txt')
+    const getNextChar = getInputAsCharsFromFile('./build/input.txt')
+    for (let i = 0; i < fileSize; i++) {
+        list.insertAtTail(getNextChar())
+    }
+    list.printList()
+}
+
+// console.log('testEmptyDLL() ', testEmptyDLL())
+// console.log('testInsertAtTailWhenEmptyDLL() ', testInsertAtTailWhenEmptyDLL())
+// console.log('testInsertAtTailWhenNotEmptyDLL() ', testInsertAtTailWhenNotEmptyDLL())
+testReadFromFileDLL()
 
