@@ -1,0 +1,6 @@
+$ ls
+dir a
+90000 a.txt
+$ cd a
+$ ls
+110000 b.txt

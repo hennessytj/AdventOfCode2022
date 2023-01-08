@@ -1,0 +1,17 @@
+$ ls
+dir a
+dir b
+$ cd a
+$ ls
+dir x
+$ cd x
+$ ls
+60000 y.txt
+$ cd ..
+$ cd ..
+$ cd b
+$ ls
+dir x
+$ cd x
+$ ls
+50000 z.txt
