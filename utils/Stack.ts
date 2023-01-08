@@ -1,5 +1,5 @@
-export class Stack {
-    private stack: string[]
+class Stack {
+    private stack: any[]
     private size: number
     constructor(items?: string[] | undefined) {
         this.stack = items !== undefined ? items : new Array<string>()
@@ -21,7 +21,7 @@ export class Stack {
     }
 
     pop() {
-        let item: string
+        let item: any
         if (this.stack.length > 0) {
             item = this.stack.pop()!
             this.size = this.stack.length
@@ -30,7 +30,13 @@ export class Stack {
         throw new Error('Attempted pop from empty stack')
     }
 
-    push(item: string) {
+    push(item: any) {
         this.size = this.stack.push(item)
     }
+
+    peek() {
+        return this.stack.slice(-1)[0]
+    }
 }
+
+export default Stack

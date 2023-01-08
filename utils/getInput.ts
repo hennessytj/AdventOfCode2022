@@ -9,7 +9,6 @@ function getInputFromFile(file: string) {
         while (line = inputLines.next()) {
             outerArray.push(String(line))
         }
-        inputLines.close()
     } catch (e: unknown) {
         console.log(e)
         process.exit(1)
